@@ -40,3 +40,4 @@ for x in $(cat $1); do
 ```
 
 # Truquis
+## Dos truquis
