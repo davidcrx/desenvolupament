@@ -38,3 +38,5 @@ for x in $(cat $1); do
 			fi
 		done
 ```
+
+# Truquis
