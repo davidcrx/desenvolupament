@@ -1,7 +1,7 @@
 # Códigos
 
 
-`Este código es un ejemplo`
+`Este códigoo es un ejemplo`
 
 
 ```sh
