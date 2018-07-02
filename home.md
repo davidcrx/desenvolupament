@@ -1,7 +1,9 @@
 # Códigos
 
+This is a example Wiki.js
 
-`Este códigoo es un ejemplo`
+-----
+
 
 
 ```sh
