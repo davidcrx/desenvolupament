@@ -19,3 +19,27 @@ Un seguit de comandes per treballar amb docker / docker-compose:
 *  Veure consum de recursos de cada container: `docker stats`
 *  Inspeccionar en profunditat un container concret: `docker inspect <id_container>`
 
+
+### Creació d'un Swarm
+Per crear un Swarm seguint l'esquema explicat fins ara s'han de seguir els següents passos:
+
+*  Crear el manager i màquina on s'executarà el gitlab-runner a través de la AMI predefinida a EC2. Un cop s'ha creat s'hi entra i s'inicialitza el swarm seguint les següents instruccions:
+```shell
+sudo usermod -aG docker $USER
+docker swarm init
+docker network create --driver=overlay public
+docker node update --label-add special=monitoring <id_manager>
+```
+
+*  Crear els workers a través de EC2. Per tal que s'afegeixin els nodes automàticament al swarm s'ha d'executar l'ordre: `docker swarm join-token worker` al manager previament creat. Després s'enganxa aquest codi en l'apartat de **Advanced details** al crear la màquina, de tal manera que quedi així (per exemple):
+```shell
+#!/bin/bash
+
+sudo docker swarm join --token SWMTKN-1-3wgcctmd8irr94wcrh1k9y2dnutl5gasxlr1fm7a6aa2d4q0hb-b492uielyctm6g8lwjwz6bium 172.31.37.136:2377
+```
+
+*  (OPCIONAL) Crear els managers seguint el mateix procediment anterior canviant worker per manager.
+
+
+Amb aquests senzills passos ja tenim el swarm creat i a punt per començar a posar els diferents projectes a través de Gitlab.
+
