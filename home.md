@@ -41,5 +41,12 @@ sudo docker swarm join --token SWMTKN-1-3wgcctmd8irr94wcrh1k9y2dnutl5gasxlr1fm7a
 *  (OPCIONAL) Crear els managers seguint el mateix procediment anterior canviant worker per manager.
 
 
+```sh
+docker stack ls
+docker stack ps [service]
+```
+
+
+
 Amb aquests senzills passos ja tenim el swarm creat i a punt per començar a posar els diferents projectes a través de Gitlab.
 
