@@ -6,4 +6,5 @@
 
 Borrar tots els fitxers .bak del directori actual
 
-`find / -name "*.bak" | xargs -d "\n" rm`
+`find . -name "*.bak" | xargs -d "\n" rm`
+
