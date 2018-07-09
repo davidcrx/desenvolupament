@@ -49,6 +49,22 @@ docker service logs -f -t --tail=50 ppui0jbx2d24
 ```
 
 
-
 Amb aquests senzills passos ja tenim el swarm creat i a punt per començar a posar els diferents projectes a través de Gitlab.
+
+Per comprovar els serveis:
+
+`docker stack services imbee2fb`
+
+Per reiniciar un contenidor dins de un swarm:
+
+`docker service scale imbee2fb_imbee2fb=0`
+`docker service scale imbee2fb_imbee2fb=1`
+
+
+
+
+
+
+
+
 
