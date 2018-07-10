@@ -16,3 +16,6 @@ Funcionament:
 `$ termtosvg printf.svg`
 
 `$ firefox printf.svg`
+
+
+
