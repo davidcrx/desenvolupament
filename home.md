@@ -60,8 +60,8 @@ Per reiniciar un contenidor dins de un swarm:
 `docker service scale imbee2fb_imbee2fb=0`
 `docker service scale imbee2fb_imbee2fb=1`
 
-## Wiki.js
-
+# Wiki.js
+## Configuració
 
 ```text
 davidcrx@davidcrx:~$ nodejs wiki.js --help
