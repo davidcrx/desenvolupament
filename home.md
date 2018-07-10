@@ -60,6 +60,29 @@ Per reiniciar un contenidor dins de un swarm:
 `docker service scale imbee2fb_imbee2fb=0`
 `docker service scale imbee2fb_imbee2fb=1`
 
+## Wiki.js
+
+
+```text
+davidcrx@davidcrx:~$ nodejs wiki.js --help
+
+Usage: node wiki.js <cmd> [args]
+
+Comandos:
+  start             Start Wiki.js process
+  stop              Stop Wiki.js process
+  restart           Restart Wiki.js process
+  configure [port]  Configure Wiki.js using the web-based setup wizard
+
+Opciones:
+  --help     Muestra ayuda                                            [booleano]
+  --version  Muestra número de versión                                [booleano]
+
+Read the docs at https://wiki.requarks.io
+```
+
+
+
 
 
 
