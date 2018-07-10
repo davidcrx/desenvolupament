@@ -63,6 +63,8 @@ Per reiniciar un contenidor dins de un swarm:
 # Wiki.js
 ## Configuració
 
+Iniciar / parar wiki.js
+
 ```text
 davidcrx@davidcrx:~$ nodejs wiki.js --help
 
