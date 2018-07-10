@@ -53,12 +53,16 @@ Amb aquests senzills passos ja tenim el swarm creat i a punt per començar a pos
 
 Per comprovar els serveis:
 
-`docker stack services imbee2fb`
+`docker stack services XXXXX`
 
 Per reiniciar un contenidor dins de un swarm:
 
 `docker service scale imbee2fb_imbee2fb=0`
 `docker service scale imbee2fb_imbee2fb=1`
+
+Per eliminar:
+
+`docker stack rm XXXX`
 
 # Wiki.js
 ## Configuració
