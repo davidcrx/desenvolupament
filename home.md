@@ -57,8 +57,8 @@ Per comprovar els serveis:
 
 Per reiniciar un contenidor dins de un swarm:
 
-`docker service scale imbee2fb_imbee2fb=0`
-`docker service scale imbee2fb_imbee2fb=1`
+`docker service scale XXXX_XXXX=0`
+`docker service scale XXXX_XXXX=1`
 
 Per eliminar:
 
