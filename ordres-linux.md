@@ -18,3 +18,7 @@ Obrir proxy mitjançant ssh.
 
 `ssh -D 8080 user@domain.com`
 
+Generar clau rsa ssh:
+
+`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+
