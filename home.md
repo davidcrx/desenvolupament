@@ -88,6 +88,29 @@ Read the docs at https://wiki.requarks.io
 ```
 
 
+# Jinja html
+
+Exemple per incorporar a html
+
+```<p class="m-t"> <small>IMbee &copy; {{ year }}</small></p>```
+
+Exemple per definir **year** a funció:
+
+```python
+@app.route('/loginin', methods=['GET'])
+async def hello():
+    """
+    """
+    year_now = utils.get_year()
+    return await render_template("login.html", year=year_now)
+```
+
+
+
+		
+
+
+
 
 
 
