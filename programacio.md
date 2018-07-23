@@ -104,3 +104,16 @@ for item in entries:
           text = message['text']
           print(str(text))
 ```
+
+Any actual:
+
+```python
+def get_year():
+    """
+    Retorna el any actual
+    """
+    import datetime
+    now = datetime.datetime.now()
+    return(now.year)
+```
+
