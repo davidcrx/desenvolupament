@@ -8,6 +8,10 @@ Per cambiar de branca:
 
 `git checkout "branca"`
 
+Per crear una branca nova:
+
+`git checkout -b branca`
+
 Es imprescindible que quan canviem de branca tot estigui actualitzat:
 
 `git pull origin 'branca'`
