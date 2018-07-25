@@ -117,3 +117,43 @@ def get_year():
     return(now.year)
 ```
 
+# Custom Redis
+
+```pyhton
+
+import asyncio
+import random
+import aioredis
+import logging
+from quart import Quart, request, url_for, jsonify
+
+aredis = None
+
+async def init_redis():
+    global aredis
+    aredis = await aioredis.create_redis_pool(('redis-accounts', 6379), minsize=5, maxsize=20, loop=loop)
+
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(init_redis())
+
+
+async def store_user_data(userId, data):
+    """
+    """
+    await aredis.set('test_'+userId, data)
+
+
+async def get_user_data(userId):
+    """
+    """
+    data = await aredis.get('test_'+userId)
+
+    if data:
+        logging.info('data almacenada ---> '+str(data))
+    else:
+        logging.info('no s ha trobat info....')
+
+    return data
+
+```
