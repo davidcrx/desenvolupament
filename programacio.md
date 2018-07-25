@@ -158,7 +158,7 @@ async def get_user_data(userId):
 
 ```
 
-## App.py (integració redis)
+*  App.py (integració redis)
 
 ```python
 @app.before_first_request
