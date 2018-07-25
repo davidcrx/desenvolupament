@@ -120,7 +120,6 @@ def get_year():
 # Custom Redis
 
 ```pyhton
-
 import asyncio
 import random
 import aioredis
@@ -154,6 +153,5 @@ async def get_user_data(userId):
     else:
         logging.info('no s ha trobat info....')
 
-    return data
-
+    return dat
 ```
