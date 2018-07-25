@@ -157,3 +157,35 @@ async def get_user_data(userId):
     return dat
 
 ```
+
+
+```python
+@app.before_first_request
+async def init():
+    logging.info('INIT_APP')
+    await db.init_mysql()
+    await customRedis.init_redis()
+
+
+@app.route('/logout')
+async def logout():
+    session.clear()
+    return redirect('/login', 302)
+
+
+@app.route('/store-redis')
+async def store_redis():
+    data = {
+        'telf':'123123123'
+    }
+    await customRedis.store_user_data('user1', json.dumps(data))
+    return 'stored'
+
+
+@app.route('/get-redis')
+async def get_redis():
+    data = await customRedis.get_user_data('user1')
+    print(str(data))
+    return 'readed'
+```
+
