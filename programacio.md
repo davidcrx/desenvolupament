@@ -199,9 +199,6 @@ values = ["100,123 €", "100.123 €", "100,000 €", "100.000 €", "89 €", 
 
 def testing_bench(value1, value2):
 
-    value1 = value1.replace()
-    value2 = re.sub("\d+([\d,]?\d)*(\.\d+)?","100.100", value2)
-
     value1 = value1.replace("€","")
     value1 = value1.replace(" ","")
     value2 = value2.replace("€","")
