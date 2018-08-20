@@ -190,3 +190,32 @@ async def get_redis():
     return 'readed'
 ```
 
+# String to float numbers
+
+
+
+```python
+values = ["100,123 €", "100.123 €", "100,000 €", "100.000 €", "89 €", "150 €", "100 €", "123,123 €"]
+
+def testing_bench(value1, value2):
+
+    value1 = value1.replace()
+    value2 = re.sub("\d+([\d,]?\d)*(\.\d+)?","100.100", value2)
+
+    value1 = value1.replace("€","")
+    value1 = value1.replace(" ","")
+    value2 = value2.replace("€","")
+    value2 = value2.replace(" ","")
+    
+    val = float(value1.replace(',','.'))
+    val2 = float(value2.replace(',','.'))
+    val3 = val<=val2
+    
+    return val3
+
+
+result = testing_bench(values[4], values[7])
+print(result)
+
+```
+
